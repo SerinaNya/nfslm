@@ -8,9 +8,9 @@ app = Flask(__name__)
 
 class icons(object):
     '''Response icons'''
-    offline: str = './icons/offline.svg'
-    online: str = './icons/online.svg'
-    warning: str = './icons/warning.svg'
+    offline: str = 'icons/offline.svg'
+    online: str = 'icons/online.svg'
+    warning: str = 'icons/warning.svg'
 
 
 # https://example.com/status-icon?addr=mc.hypixel.net
@@ -46,4 +46,4 @@ def isServerOnline(_serverAddr: str) -> bool:
 
 
 if __name__ == '__main__':
-    app.run(port=85)
+    app.run(host='0.0.0.0', port=80)
